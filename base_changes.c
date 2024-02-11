@@ -58,6 +58,7 @@ int print_binary(va_list list)
  * @list: all the arguments passed to the program
  * Return: Number of symbols printed to stdout
  */
+
 int print_octal(va_list list)
 {
 	unsigned int num;
