@@ -1,12 +1,11 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
- * print_number - prints a number sent to this function
+ * print_number - prints a number send to this function
  * @args: List of arguments
  * Return: The number of arguments printed
  */
-
-int print_no(va_list args)
+int print_number(va_list args)
 {
 	int n;
 	int div;
@@ -19,7 +18,7 @@ int print_no(va_list args)
 
 	if (n < 0)
 	{
-		len += _put_char('-');
+		len += _write_char('-');
 		num = n * -1;
 	}
 	else
@@ -30,7 +29,7 @@ int print_no(va_list args)
 
 	for (; div != 0; )
 	{
-		len += _put_char('0' + num / div);
+		len += _write_char('0' + num / div);
 		num %= div;
 		div /= 10;
 	}
@@ -42,7 +41,7 @@ int print_no(va_list args)
  * @n: unsigned integer to be printed
  * Return: The amount of numbers printed
  */
-int print_unsgined_no(unsigned int n)
+int print_unsgined_number(unsigned int n)
 {
 	int div;
 	int len;
@@ -58,7 +57,7 @@ int print_unsgined_no(unsigned int n)
 
 	for (; div != 0; )
 	{
-		len += _put_char('0' + num / div);
+		len += _write_char('0' + num / div);
 		num %= div;
 		div /= 10;
 	}

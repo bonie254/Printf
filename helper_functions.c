@@ -1,4 +1,4 @@
-#include "main.h"
+#include "holberton.h"
 #include <stdio.h>
 
 /**
@@ -7,8 +7,6 @@
  * @s: string to reverse
  * Return: A pointer to a character
  */
-
-
 char *rev_string(char *s)
 {
 	int len;
@@ -37,13 +35,12 @@ char *rev_string(char *s)
  * write_base - sends characters to be written on standard output
  * @str: String to parse
  */
-
 void write_base(char *str)
 {
 	int i;
 
 	for (i = 0; str[i] != '\0'; i++)
-		_put_char(str[i]);
+		_write_char(str[i]);
 }
 
 /**

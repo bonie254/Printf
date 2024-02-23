@@ -1,15 +1,12 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
  * print_reversed - Calls a function to reverse and print a string
  * @arg: Argument passed to the function
  * Return: The amount of characters printed
  */
-
-
 int print_reversed(va_list arg)
 {
-
 	int len;
 	char *str;
 	char *ptr;
@@ -21,7 +18,7 @@ int print_reversed(va_list arg)
 	if (ptr == NULL)
 		return (-1);
 	for (len = 0; ptr[len] != '\0'; len++)
-		_put_char(ptr[len]);
+		_write_char(ptr[len]);
 	free(ptr);
 	return (len);
 }
@@ -31,7 +28,6 @@ int print_reversed(va_list arg)
  * @list: string to convert
  * Return: converted string
  */
-
 int rot13(va_list list)
 {
 	int i;
@@ -49,12 +45,12 @@ int rot13(va_list list)
 		{
 			if (str[i] == s[x])
 			{
-				_put_char(u[x]);
+				_write_char(u[x]);
 				break;
 			}
 		}
 		if (x == 53)
-			_put_char(str[i]);
+			_write_char(str[i]);
 	}
 	return (i);
 }

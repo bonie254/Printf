@@ -1,15 +1,13 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
  * parser - Receives the main string and all the necessary parameters to
  * print a formated string.
- * @format: A string containing all the wanted characters.
- * @f_list: A list of all the posible functions
+ * @format: A string containing all the desired characters.
+ * @f_list: A list of all the posible functions.
  * @arg_list: A list containing all the argumentents passed to the program.
  * Return: A total count of the characters printed.
  */
-
-
 int parser(const char *format, conver_t f_list[], va_list arg_list)
 {
 	int i, j, r_val, printed_chars;
@@ -35,8 +33,8 @@ int parser(const char *format, conver_t f_list[], va_list arg_list)
 			{
 				if (format[i + 1] != '\0')
 				{
-					_put_char(format[i]);
-					_put_char(format[i + 1]);
+					_write_char(format[i]);
+					_write_char(format[i + 1]);
 					printed_chars = printed_chars + 2;
 				}
 				else
@@ -46,7 +44,7 @@ int parser(const char *format, conver_t f_list[], va_list arg_list)
 		}
 		else
 		{
-			_put_char(format[i]); /*call the write function*/
+			_write_char(format[i]); /*call the write function*/
 			printed_chars++;
 		}
 	}
